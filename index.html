@@ -1,157 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</head>
-<body class="bg-[#252422] font-['Quicksand']">
+  </head>
+  <body class="bg-[#252422] font-['Quicksand']">
+    <button type="button" class="py-5 px-5 md:hidden block">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="30"
+        height="30"
+        viewBox="0,0,256,256"
+      >
+        <g
+          fill="#ffffff"
+          fill-rule="nonzero"
+          stroke="none"
+          stroke-width="1"
+          stroke-linecap="butt"
+          stroke-linejoin="miter"
+          stroke-miterlimit="10"
+          stroke-dasharray=""
+          stroke-dashoffset="0"
+          font-family="none"
+          font-weight="none"
+          font-size="none"
+          text-anchor="none"
+          style="mix-blend-mode: normal"
+        >
+          <g transform="scale(5.12,5.12)">
+            <path
+              d="M5,8c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,23c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,38c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </button>
+    <nav class="bg-black w-full md:bg-transparent md:px-20">
+      <ul
+        class="text-center text-white md:flex md:justify-start gap-10 py-5 hidden md:block"
+      >
+        <li>Home</li>
 
+        <li>Contact</li>
 
-    <button type="button" class="py-5 px-5"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
-        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5,8c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,23c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,38c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175z"></path></g></g>
-        </svg></button>
-    <nav class="bg-black w-full">
-        <ul class="text-center text-white flex justify-start gap-10 py-5 hidden md:block">
-            <li>Home</li>
+        <li>Service</li>
 
-            <li>Contact</li>
+        <li>About</li>
+        <li>Faq</li>
+      </ul>
 
-            <li>Service</li>
+      <ul
+        id="forcp"
+        class="text-white text-center flex justify-center block md:hidden z-20"
+      >
+        <div class="">
+          <li class="py-5">Home</li>
 
-            <li>About</li>
-            <li>Faq</li>
-        </ul>
+          <li class="py-5">Contact</li>
 
-        <ul id="forcp" class="text-white text-center flex justify-center block md:hidden  z-20">
-            <div class="">
-            <li class="py-5">Home</li>
+          <li class="py-5">Service</li>
 
-            <li class="py-5">Contact</li>
-
-            <li class="py-5">Service</li>
-
-            <li class="py-5">About</li>
-            <li class="py-5">Faq</li>
-            </div>
-        </ul>
+          <li class="py-5">About</li>
+          <li class="py-5">Faq</li>
+        </div>
+      </ul>
     </nav>
 
-    
     <script>
-        $(document).ready(function(){
-            $('button').click(function(){
-                $('#forcp').toggle();
-            })
-        })
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("#forcp").toggle();
+        });
+      });
     </script>
 
- 
-
     <section class="px-5 md:px-20">
-        <div class="md:flex md:justify-between md:gap-10">   
+      <div class="md:flex md:justify-between md:gap-10">
+        <div class="">
+          <h1 class="text-2xl md:text-3xl text-white font-bold md:mt-20">
+            Find Your Perfect Rental Home Today!
+          </h1>
+          <p class="md:w-[700px] w-64 text-white mt-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            facere provident sunt deserunt aspernatur veniam, repellat ullam
+            blanditiis ratione eligendi, dolorem explicabo necessitatibus
+            nostrum perferendis temporibus beatae fugiat laudantium ab.
+          </p>
+          <button class="rounded-lg text-black px-6 py-1 bg-[#ccc5b9] mt-5">
+            Explore
+          </button>
 
-            <div class="">
-                <h1 class="text-2xl md:text-3xl text-white font-bold mt-20">Find Your Perfect Rental Home Today!</h1>
-                <p class="md:w-[700px] w-64 text-white mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet facere provident sunt deserunt aspernatur veniam, repellat ullam blanditiis ratione eligendi, dolorem explicabo necessitatibus nostrum perferendis temporibus beatae fugiat laudantium ab.</p>
-                <button class="rounded-lg text-black px-6 py-1 bg-[#ccc5b9] mt-5">Explore</button>
-
-                <div class="flex justify-center gap-5 mt-5 hidden md:block">  
-                    <img src="p1.jfif" class="rounded-lg w-40 h-40" alt="" srcset="">
-                    <img src="p2.jfif" class="rounded-lg w-40 h-40" alt="" srcset="">
-                    <img src="p3.jfif" class="rounded-lg w-40 h-40" alt="" srcset="">
-                    <img src="p4.jfif" class="rounded-lg w-40 h-40" alt="" srcset=""> 
-                </div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-1">
-                <img src="p1.jfif" class="rounded-tl-[100px]" alt="" srcset="">
-                <img src="p5.jfif" class="rounded-tr-full rounded-br-full rounded-tl-full" alt="" srcset="">
-                <img src="p3.jfif" class="rounded-bl-full rounded-br-full rounded-tl-full" alt="" srcset="">
-                <img src="p6.jfif" class="rounded-br-[100px] h-84" alt="" srcset="">
-            </div>
+          <div class="md:flex md:justify-start md:mt-5 gap-5 hidden md:block">
+            <img src="p1.jfif" class="rounded-lg w-32 h-32" alt="" srcset="" />
+            <img src="p2.jfif" class="rounded-lg w-32 h-32" alt="" srcset="" />
+            <img src="p3.jfif" class="rounded-lg w-32 h-32" alt="" srcset="" />
+            <img src="p4.jfif" class="rounded-lg w-32 h-32" alt="" srcset="" />
+          </div>
         </div>
-       
+
+        <div class="grid grid-cols-2 gap-1 mt-10">
+          <img src="p1.jfif" class="rounded-tl-[100px]" alt="" srcset="" />
+          <img
+            src="p5.jfif"
+            class="rounded-tr-full rounded-br-full rounded-tl-full"
+            alt=""
+            srcset=""
+          />
+          <img
+            src="p3.jfif"
+            class="rounded-bl-full rounded-br-full rounded-tl-full"
+            alt=""
+            srcset=""
+          />
+          <img src="p6.jfif" class="rounded-br-[100px] h-84" alt="" srcset="" />
+        </div>
+      </div>
     </section>
 
-
-    <section class="h-[50vh] text-white mt-10  px-20" >
-
+    <section class="h-full md:h-[50vh] text-white mt-10 md:px-20 px-10">
+      <div>
         <div>
-            <div>
-                <h1 class="text-center text-3xl font-bold">Why Rent with Us?</h1>
-            </div>
-
-            <div class="flex justify-center gap-5 mt-5">
-                <div class="card rounded-lg px-5 py-5 w-72 border border-slate-400">
-                    <b class="py-5 text-1xl">Extensive Listings</b>
-                    <p class="w-64 mt-5 font-light text-justify">Browse a wide range of homes, from modern apartments to spacious houses, all available in your preferred location.</p>
-                </div>
-
-                <div class="card rounded-lg px-5 py-5 w-72 border border-slate-400">
-                    <b class="py-5 text-1xl">Affordable Options</b>
-                    <p class="w-64 mt-5 font-light text-justify">Find rental properties that match your budget, without compromising on quality or comfort.</p>
-                </div>
-                <div class="card rounded-lg px-5 py-5 w-72 border border-slate-400">   
-                    <b class="py-5 text-1xl">Easy Search Tools</b>
-                    <p class="w-64 mt-5 font-light text-justify">Use our advanced filters to narrow down your options based on size, price, neighborhood, and amenities.</p>
-                </div>
-
-                <div class="card rounded-lg px-5 py-5 w-72 border border-slate-400">  
-                    <b class="py-5 text-1xl">Flexible Lease Terms:</b>
-                    <p class="w-64 mt-5 font-light text-justify">Whether you need a short-term rental or something more permanent, we offer flexible leasing options that work with your schedule.</p>
-                </div>
-            </div>
+          <h1 class="text-center text-3xl font-bold">Why Rent with Us?</h1>
         </div>
 
+        <div class="md:flex md:justify-center gap-5 md:mt-5 grid mt-5 ">
+          <div class="card rounded-lg px-5 py-5 w-72 border border-slate-400">
+            <b class="py-5 text-1xl">Extensive Listings</b>
+            <p class="w-64 mt-5 font-light text-justify">
+              Browse a wide range of homes, from modern apartments to spacious
+              houses, all available in your preferred location.
+            </p>
+          </div>
+
+          <div class="card rounded-lg px-5 py-5 w-72 border border-slate-400">
+            <b class="py-5 text-1xl">Affordable Options</b>
+            <p class="w-64 mt-5 font-light text-justify">
+              Find rental properties that match your budget, without
+              compromising on quality or comfort.
+            </p>
+          </div>
+          <div class="card rounded-lg px-5 py-5 w-72 border border-slate-400">
+            <b class="py-5 text-1xl">Easy Search Tools</b>
+            <p class="w-64 mt-5 font-light text-justify">
+              Use our advanced filters to narrow down your options based on
+              size, price, neighborhood, and amenities.
+            </p>
+          </div>
+
+          <div class="card rounded-lg px-5 py-5 w-72 border border-slate-400">
+            <b class="py-5 text-1xl">Flexible Lease Terms:</b>
+            <p class="w-64 mt-5 font-light text-justify">
+              Whether you need a short-term rental or something more permanent,
+              we offer flexible leasing options that work with your schedule.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-
-    <section class="h-[50vh] text-white mt-10  px-20" >
-
+    <section class="h-full  text-white mt-10 md:px-20">
+      <div>
         <div>
-            <div>
-                <h1 class="text-center text-3xl font-bold">How It Works?</h1>
-            </div>
-
-            <div class="flex justify-center gap-5 mt-5">
-               <div class="">
-                <div class="card rounded-lg px-5 py-2 w-72 border border-slate-800">  
-                    <b class="py-5 text-1xl">Search</b>
-                    <p class="w-64 mt-5 font-light text-justify">Enter your desired location, price range, and property type to explore homes tailored to your needs.</p>
-                </div>
-
-                <div class="card rounded-lg px-5 py-2 w-72 border border-slate-800">   
-                    <b class="py-5 text-1xl">Tour</b>
-                    <p class="w-64 mt-5 font-light text-justify">Schedule a virtual or in-person tour of the properties that catch your eye.</p>
-                </div>
-               
-               </div>
-
-               <div>
-                <img src="p1.jfif" class="w-96 h-96" alt="">
-               </div>
-
-               <div>
-                <div class="card rounded-lg px-5 py-2 w-72 border border-slate-800">     
-                    <b class="py-5 text-1xl">Apply</b>
-                    <p class="w-64 mt-5 font-light text-justify">Submit your rental application quickly and easily online.</p>
-                </div>
-                <br>
-                <div class="card rounded-lg px-5 py-2 w-72 border border-slate-800">  
-                    <b class="py-5 text-1xl">Move-In</b>
-                    <p class="w-64 mt-5 font-light text-justify">Get ready to move into your new home and start living your best life!</p>
-                </div>
-               </div>
-            </div>
+          <h1 class="text-center text-3xl font-bold">How It Works?</h1>
         </div>
 
+        <div class="md:flex md:justify-center grid px-10 gap-5 mt-5">
+          <div class="">
+            <div class="card rounded-lg px-5 py-2 w-72 border border-slate-800">
+              <b class="py-5 text-1xl">Search</b>
+              <p class="w-64 mt-5 font-light text-justify">
+                Enter your desired location, price range, and property type to
+                explore homes tailored to your needs.
+              </p>
+            </div>
+
+            <div class="card rounded-lg px-5 py-2 w-72 border border-slate-800">
+              <b class="py-5 text-1xl">Tour</b>
+              <p class="w-64 mt-5 font-light text-justify">
+                Schedule a virtual or in-person tour of the properties that
+                catch your eye.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <img src="p1.jfif" class="w-96 h-96 hidden md:block" alt="" />
+          </div>
+
+          <div>
+            <div class="card rounded-lg px-5 py-2 w-72 border border-slate-800">
+              <b class="py-5 text-1xl">Apply</b>
+              <p class="w-64 mt-5 font-light text-justify">
+                Submit your rental application quickly and easily online.
+              </p>
+            </div>
+            <br />
+            <div class="card rounded-lg px-5 py-2 w-72 border border-slate-800">
+              <b class="py-5 text-1xl">Move-In</b>
+              <p class="w-64 mt-5 font-light text-justify">
+                Get ready to move into your new home and start living your best
+                life!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+  
+ <section class="relative h-full md:h-[70vh] text-white mt-10 bg-[url('wallp.jpg')] bg-center bg-cover bg-no-repeat">
     
-</body>
+    <!-- Overlay for text readability -->
+    <div class="bg-black h-full w-full opacity-35 absolute top-0 left-0 z-10"></div>
+
+    <!-- Content section with positioning -->
+    <div class="relative z-20 grid px-10 items-center py-36">
+        <div>
+            <h1 class="text-3xl text-white text-center font-bold">Ready to Find Your Perfect Rental Home?</h1>
+        </div>
+        <div class="grid place-items-center">
+         
+            <p class="text-justify mt-5 w-full px-20">
+                Start your search today and discover the home that’s just right for you. If you have any questions or need personalized assistance, our friendly team is here to help. Contact us at [Your Contact Information] or use our live chat feature for immediate support.
+            </p>
+            <br>
+            <button class="rounded-lg border border-slate-400 px-6 py-2 w-64 mt-5 hover:bg-white hover:text-black">Contact Us</button>
+        
+         
+        </div>
+    </div>
+</section>
+
+  </body>
 </html>
